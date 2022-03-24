@@ -22,7 +22,7 @@ const Prueba = (req, res) => {
 const Token = (req, res) => {
     const token = jwt.sign({user_id: 1, name: 'jorge', access: true},
     'Gydnfdk57173$#120', {expiresIn: 20});
-    return res.status(200).send(token);
+    return res.status(200).send({token});
 }
 
 const ValidaToken = (req, res) => {
